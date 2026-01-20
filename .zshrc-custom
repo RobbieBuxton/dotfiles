@@ -1,0 +1,2 @@
+# Custom zsh configuration
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.my-dotfiles --work-tree=$HOME'
