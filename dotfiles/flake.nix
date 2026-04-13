@@ -7,7 +7,7 @@
 
   outputs = { self, nixpkgs }:
     let
-      system = "aarch64-darwin";  # For Apple Silicon, use "x86_64-darwin" for Intel Mac
+      system = "x86_64-linux";  # For Linux x86_64
       pkgs = import nixpkgs {
         inherit system;
         config.allowUnfree = true;
@@ -18,6 +18,7 @@
         name = "my-env";
         paths = with pkgs; [
           # Development tools
+          zsh
           tmux
           oh-my-zsh
           patchelf
