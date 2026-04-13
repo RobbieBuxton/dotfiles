@@ -17,6 +17,9 @@
       packages.${system}.default = pkgs.buildEnv {
         name = "my-env";
         paths = with pkgs; [
+          # Terminfo for terminals that ssh in
+          kitty.terminfo
+
           # Development tools
           zsh
           tmux
